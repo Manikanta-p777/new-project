@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom"
+import { Navigate, useNavigate, Link } from "react-router-dom"
 import { useState } from "react"
 import Cookies from "js-cookie"
 
@@ -124,6 +124,13 @@ const RegisterForm = () => {
                     >
                         Register
                     </button>
+
+                    <p className="font-serif text-left">
+                        If already registered please
+                        <span className="underline ml-2 text-blue-500">
+                            <Link to="/login">login</Link>
+                        </span>
+                    </p>
 
                     {isError && (
                         <p className="font-semibold text-red-600 text-center">
