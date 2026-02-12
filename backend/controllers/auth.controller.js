@@ -11,26 +11,22 @@ export const signup = async (req, res) => {
         if (users.length === 0) {
             const hashedPassword = await bcrypt.hash(password, 10)
             await sql`insert into users(name,email,password) values(${name},${email},${hashedPassword})`
-            res.status(201)
-            res.json({ message: "User Created Successfully" })
+            return res.status(201).json({ message: "User Created Successfully" });
         } else {
-            res.status(400)
-            res.json({ error: "User already exists" })
+            return res.status(400).json({ error: "User already exists" });
         }
     } catch (err) {
-        res.status(500)
-        res.json({ error: err.message })
+        return res.status(500).json({error:err.message})
     }
 }
 
 export const login = async (req, res) => {
     try {
         const { email, password } = req.body
-        const users =await sql`select * from users where email=${email}`
+        const users = await sql`select * from users where email=${email}`
         const user = users[0]
         if (users.length === 0) {
-            res.status(400)
-            res.json({ error: "Invalid User" })
+            return res.status(400).json({error:"Invalid User"})
         } else {
             const isPassword = await bcrypt.compare(password, user.password)
             if (isPassword) {
@@ -38,14 +34,12 @@ export const login = async (req, res) => {
                 const jWtToken = jwt.sign(payload, process.env.JWT_SECRET)
                 res.send({ jWtToken })
             } else {
-                res.status(400)
-                res.json({ error: "Invalid password" })
+                return res.status(400).json({error:"Invalid Password"})
             }
         }
 
-    } catch (error) {
-        res.status(500)
-        res.json({ error: err.message })
+    } catch (err) {
+        return res.status(500).json({error:err.message})
     }
 
 }
