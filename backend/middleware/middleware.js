@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken"
 import dotenv from "dotenv"
 dotenv.config()
 
-export const authinticateToken = async (req, res, next) => {
+export const autheinticateToken = async (req, res, next) => {
     let jwt_token
     const authHeader = req.headers["authorization"]
     if (authHeader !== undefined) {
@@ -15,7 +15,7 @@ export const authinticateToken = async (req, res, next) => {
             if (error) {
                 return res.status(401).json({ error: "Invalid access token" })
             } else {
-                request.username = payload.username;
+                req.username = payload;
                 next();
             }
         });
