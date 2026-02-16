@@ -26,8 +26,8 @@ const Navbar = () => {
                 {/* Desktop Links */}
                 <ul className="hidden md:flex gap-8 text-slate-200 font-medium">
                     <li><Link to="/" className="nav-link">Home</Link></li>
+                    <li><Link to="/chatbot" className="nav-link">Chatbot</Link></li>
                     <li><Link to="/about" className="nav-link">About</Link></li>
-                    <li><Link to="/services" className="nav-link">Services</Link></li>
                     <li><Link to="/projects" className="nav-link">Projects</Link></li>
                     <li><Link to="/contact" className="nav-link">Contact</Link></li>
                 </ul>
