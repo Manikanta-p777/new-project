@@ -1,10 +1,10 @@
 import dotenv from "dotenv";
 import postgres from "postgres";
 
-dotenv.config(); // 🔥 guaranteed
+dotenv.config(); 
 
 const sql = postgres(process.env.DATABASE_URL, {
-  ssl: "require",
+  ssl: false,
 });
 
 export default sql;
