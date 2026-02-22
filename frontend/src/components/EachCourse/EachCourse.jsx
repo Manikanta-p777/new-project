@@ -5,7 +5,7 @@ const EachCourse = props => {
     const { id, title, description, image_url, button_text, button_link } = courseDetails
 
     return (
-        <div className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[350px] bg-slate-800 text-white rounded-xl shadow-lg hover:scale-105 transition duration-300 overflow-hidden">
+        <div className="w-full max-w-[350px] bg-slate-800 text-white rounded-xl shadow-lg hover:scale-105 transition duration-300 overflow-hidden">
             <div className="w-full aspect-video p-3">
                 <img
                     src={image_url}
