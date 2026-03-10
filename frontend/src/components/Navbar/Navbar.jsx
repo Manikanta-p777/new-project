@@ -55,10 +55,9 @@ const Navbar = () => {
                 <div className="md:hidden bg-slate-900 px-6 pb-4 space-y-4">
                     <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Home</Link>
                     <Link to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</Link>
-                    <Link to="/services" className="mobile-link" onClick={() => setMenuOpen(false)}>Services</Link>
-                    <Link to="/projects" className="mobile-link" onClick={() => setMenuOpen(false)}>Projects</Link>
+                    <Link to="/chatbot" className="mobile-link" onClick={() => setMenuOpen(false)}>chatbot</Link>
+                    <Link to="/courses" className="mobile-link" onClick={() => setMenuOpen(false)}>Courses</Link>
                     <Link to="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</Link>
-
                     {/* Logout Button (Mobile) */}
                     <button
                         className="w-full mt-3 px-4 py-2 rounded-lg bg-red-500 text-white
