@@ -20,7 +20,7 @@ const Navbar = () => {
                     to="/"
                     className="text-2xl font-bold tracking-wide text-cyan-400"
                 >
-                    MyBrand
+                    LMS
                 </Link>
 
                 {/* Desktop Links */}
