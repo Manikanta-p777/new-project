@@ -29,7 +29,6 @@ const Navbar = () => {
                     <li><Link to="/chatbot" className="nav-link">Chatbot</Link></li>
                     <li><Link to="/about" className="nav-link">About</Link></li>
                     <li><Link to="/courses" className="nav-link">Courses</Link></li>
-                    <li><Link to="/contact" className="nav-link">Contact</Link></li>
                 </ul>
 
                 {/* Logout Button (Desktop) */}
@@ -57,7 +56,6 @@ const Navbar = () => {
                     <Link to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</Link>
                     <Link to="/chatbot" className="mobile-link" onClick={() => setMenuOpen(false)}>chatbot</Link>
                     <Link to="/courses" className="mobile-link" onClick={() => setMenuOpen(false)}>Courses</Link>
-                    <Link to="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</Link>
                     {/* Logout Button (Mobile) */}
                     <button
                         className="w-full mt-3 px-4 py-2 rounded-lg bg-red-500 text-white
